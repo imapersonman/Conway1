@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92B2C4EA1C8102EA008D7EDA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92B2C4E91C8102EA008D7EDA /* main.cpp */; };
+		92B2C4F11C8102FC008D7EDA /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2C4F01C8102FC008D7EDA /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		92B2C4E61C8102EA008D7EDA /* Conway1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Conway1; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B2C4E91C8102EA008D7EDA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		92B2C4F01C8102FC008D7EDA /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B2C4F11C8102FC008D7EDA /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +44,7 @@
 		92B2C4DD1C8102EA008D7EDA = {
 			isa = PBXGroup;
 			children = (
+				92B2C4F21C810300008D7EDA /* Frameworks */,
 				92B2C4E81C8102EA008D7EDA /* Conway1 */,
 				92B2C4E71C8102EA008D7EDA /* Products */,
 			);
@@ -60,6 +64,14 @@
 				92B2C4E91C8102EA008D7EDA /* main.cpp */,
 			);
 			path = Conway1;
+			sourceTree = "<group>";
+		};
+		92B2C4F21C810300008D7EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92B2C4F01C8102FC008D7EDA /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +219,10 @@
 		92B2C4EE1C8102EA008D7EDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +230,10 @@
 		92B2C4EF1C8102EA008D7EDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
